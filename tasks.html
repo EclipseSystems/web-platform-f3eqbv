@@ -51,7 +51,7 @@
           <!-- Sidebar menu -->
           <ul class="navbar-nav mb-lg-7">
             <li class="nav-item">
-              <a class="nav-link active" href="#">
+              <a class="nav-link" href="./index.html">
                 <i class="bi-house-door me-3"></i>
                 <span>Dashboard</span>
               </a>
@@ -63,7 +63,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link active" href="#">
                 <i class="bi-list-check me-3"></i>
                 <span>Tasks</span>
               </a>
@@ -331,9 +331,336 @@
       <div class="container-fluid">
         <div class="d-flex align-items-baseline justify-content-between">
           <!-- Page title -->
-          <h1 class="h2">
-            Tasks
+          <h1 class="h2 d-flex align-items-center justify-content-between">
+            <span>
+              Tasks
+              <button
+                type="button"
+                class="btn btn-sm btn-primary ms-4"
+                data-bs-toggle="modal"
+                data-bs-target="#taskModal"
+                id="btnAddTask"
+              >
+                <i class="bi-plus-circle me-2"></i>
+                Add new task
+              </button>
+            </span>
           </h1>
+        </div>
+        <div class="board" data-sortable='["list-1", "list-2", "list-3"]'>
+          <!-- Not started -->
+          <div class="tasks">
+            <div class="bg-gray-300 px-1 py-2 rounded">
+              <h2 class="h4 text-uppercase p-3 px-4 mb-1">To do (3)</h2>
+              <div id="list-1">
+                <!-- Card example-->
+                <div class="card border-0 mb-2 cursor-move">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5
+                        class="text-uppercase text-muted fw-semibold mb-0"
+                        data-bs-toggle="tooltip"
+                        data-bs-original-title="DL-40"
+                      >
+                        DL-40
+                      </h5>
+                      <!-- Dropdown -->
+                      <div
+                        class="dropdown"
+                        data-bs-toggle="tooltip"
+                        data-bs-original-title="Actions"
+                      >
+                        <a
+                          href="javascript: void(0);"
+                          class="dropdown-toggle no-arrow text-muted"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="bi-three-dots"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="./task-details.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="javascript: void(0);"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider" />
+                          </li>
+                          <li>
+                            <span class="dropdown-header">OTHER ACTIONS</span>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="javascript: void(0);"
+                              >Add flag</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Card title -->
+                    <a
+                      href="#"
+                      class="h4 text-body card-title d-inline-block"
+                      data-bs-toggle="tooltip"
+                      data-bs-original-title="Alternative reCaptcha solution"
+                      >Alternative reCaptcha solution</a
+                    >
+                  </div>
+                  <!-- Card header -->
+                  <div class="card-footer border-0">
+                    <div class="row justify-content-between align-items-center">
+                      <!-- Comments -->
+                      <div class="col text-muted">
+                        <i class="bi-chat-left-text me-1"></i>
+                        <span
+                          class="fs-5"
+                          data-bs-toggle="tooltip"
+                          data-bs-original-title="11 comments"
+                          >11</span
+                        >
+                      </div>
+                      <!-- Avatar -->
+                      <div class="col-auto d-flex">
+                        <div
+                          class="avatar avatar-circle avatar-xs"
+                          data-bs-toggle="tooltip"
+                          aria-label="Assignee: Jimmy Riley"
+                          data-bs-original-title="Assignee: Jimmy Riley"
+                        >
+                          <img
+                            src="https://d33wubrfki0l68.cloudfront.net/4b8c918c73e2c72876e4bd4ba8c89401bae69d14/5923c/assets/images/profiles/profile-03.jpeg"
+                            alt="..."
+                            class="avatar-img"
+                            width="30"
+                            height="30"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- In progress -->
+          <div class="tasks">
+            <div class="bg-gray-300 px-1 py-2 rounded">
+              <h2 class="h4 text-uppercase p-3 px-4 mb-1">In progress (5)</h2>
+              <div id="list-2">
+                <div class="card border-0 mb-2 cursor-move">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5
+                        class="text-uppercase text-muted fw-semibold mb-0"
+                        data-bs-toggle="tooltip"
+                        data-bs-original-title="DL-40"
+                      >
+                        DL-40
+                      </h5>
+                      <!-- Dropdown -->
+                      <div
+                        class="dropdown"
+                        data-bs-toggle="tooltip"
+                        data-bs-original-title="Actions"
+                      >
+                        <a
+                          href="javascript: void(0);"
+                          class="dropdown-toggle no-arrow text-muted"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="bi-three-dots"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="./task-details.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="javascript: void(0);"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider" />
+                          </li>
+                          <li>
+                            <span class="dropdown-header">OTHER ACTIONS</span>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="javascript: void(0);"
+                              >Add flag</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Card title -->
+                    <a
+                      href="#"
+                      class="h4 text-body card-title d-inline-block"
+                      data-bs-toggle="tooltip"
+                      data-bs-original-title="Alternative reCaptcha solution"
+                      >Alternative reCaptcha solution</a
+                    >
+                  </div>
+                  <!-- Card header -->
+                  <div class="card-footer border-0">
+                    <div class="row justify-content-between align-items-center">
+                      <!-- Comments -->
+                      <div class="col text-muted">
+                        <i class="bi-chat-left-text me-1"></i>
+                        <span
+                          class="fs-5"
+                          data-bs-toggle="tooltip"
+                          data-bs-original-title="11 comments"
+                          >11</span
+                        >
+                      </div>
+                      <!-- Avatar -->
+                      <div class="col-auto d-flex">
+                        <div
+                          class="avatar avatar-circle avatar-xs"
+                          data-bs-toggle="tooltip"
+                          aria-label="Assignee: Jimmy Riley"
+                          data-bs-original-title="Assignee: Jimmy Riley"
+                        >
+                          <img
+                            src="https://d33wubrfki0l68.cloudfront.net/4b8c918c73e2c72876e4bd4ba8c89401bae69d14/5923c/assets/images/profiles/profile-03.jpeg"
+                            alt="..."
+                            class="avatar-img"
+                            width="30"
+                            height="30"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Completed -->
+          <div class="tasks">
+            <div class="bg-gray-300 px-1 py-2 rounded">
+              <h2 class="h4 text-uppercase p-3 px-4 mb-1">Completed (2)</h2>
+              <div id="list-3">
+                <div class="card border-0 mb-2 cursor-move">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h5
+                        class="text-uppercase text-muted fw-semibold mb-0"
+                        data-bs-toggle="tooltip"
+                        data-bs-original-title="DL-40"
+                      >
+                        DL-40
+                      </h5>
+                      <!-- Dropdown -->
+                      <div
+                        class="dropdown"
+                        data-bs-toggle="tooltip"
+                        data-bs-original-title="Actions"
+                      >
+                        <a
+                          href="javascript: void(0);"
+                          class="dropdown-toggle no-arrow text-muted"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="bi-three-dots"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="./task-details.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="javascript: void(0);"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <hr class="dropdown-divider" />
+                          </li>
+                          <li>
+                            <span class="dropdown-header">OTHER ACTIONS</span>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="javascript: void(0);"
+                              >Add flag</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Card title -->
+                    <a
+                      href="#"
+                      class="h4 text-body card-title d-inline-block"
+                      data-bs-toggle="tooltip"
+                      data-bs-original-title="Alternative reCaptcha solution"
+                      >Alternative reCaptcha solution</a
+                    >
+                  </div>
+                  <!-- Card header -->
+                  <div class="card-footer border-0">
+                    <div class="row justify-content-between align-items-center">
+                      <!-- Comments -->
+                      <div class="col text-muted">
+                        <i class="bi-chat-left-text me-1"></i>
+                        <span
+                          class="fs-5"
+                          data-bs-toggle="tooltip"
+                          data-bs-original-title="11 comments"
+                          >11</span
+                        >
+                      </div>
+                      <!-- Avatar -->
+                      <div class="col-auto d-flex">
+                        <div
+                          class="avatar avatar-circle avatar-xs"
+                          data-bs-toggle="tooltip"
+                          aria-label="Assignee: Jimmy Riley"
+                          data-bs-original-title="Assignee: Jimmy Riley"
+                        >
+                          <img
+                            src="https://d33wubrfki0l68.cloudfront.net/4b8c918c73e2c72876e4bd4ba8c89401bae69d14/5923c/assets/images/profiles/profile-03.jpeg"
+                            alt="..."
+                            class="avatar-img"
+                            width="30"
+                            height="30"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
