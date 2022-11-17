@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
     />
+
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <!-- Dashly files -->
     <link
@@ -33,9 +34,6 @@
       onload="this.onload=null;this.removeAttribute('media');"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
     />
-    <!-- Dragula -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.css"/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js'></script>
   </head>
   <body>
     <!-- Navigation bar -->
@@ -350,320 +348,32 @@
             </span>
           </h1>
         </div>
-        <div class="board" data-sortable='["list-1", "list-2", "list-3", "list-4"]'>
-          <!-- Not started -->
+        <!-- Kanban board -->
+        <div
+          class="board"
+          data-sortable='["list-1", "list-2", "list-3"]'
+        >
+          <!-- To do -->
           <div class="tasks">
             <div class="bg-gray-300 px-1 py-2 rounded">
-              <h2 class="h4 text-uppercase p-3 px-4 mb-1">
-                To do (3)
-              </h2>
-              <div id="list-1">
-                <!-- Card example-->
-                <div class="card border-0 mb-2 cursor-move">
-                  <!-- Card body -->
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <h5
-                        class="text-uppercase text-muted fw-semibold mb-0"
-                        data-bs-toggle="tooltip"
-                        data-bs-original-title="DL-40"
-                      >
-                        DL-40
-                      </h5>
-                      <!-- Dropdown -->
-                      <div
-                        class="dropdown"
-                        data-bs-toggle="tooltip"
-                        data-bs-original-title="Actions"
-                      >
-                        <a
-                          href="javascript: void(0);"
-                          class="dropdown-toggle no-arrow text-muted"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <i class="bi-three-dots"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="./task-details.html"
-                              >Edit</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="javascript: void(0);"
-                              >Delete</a
-                            >
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider" />
-                          </li>
-                          <li>
-                            <span class="dropdown-header">OTHER ACTIONS</span>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="javascript: void(0);"
-                              >Add flag</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- Card title -->
-                    <a
-                      href="#"
-                      class="h4 text-body card-title d-inline-block"
-                      data-bs-toggle="tooltip"
-                      data-bs-original-title="Alternative reCaptcha solution"
-                      >Alternative reCaptcha solution</a
-                    >
-                  </div>
-                  <!-- Card header -->
-                  <div class="card-footer border-0">
-                    <div class="row justify-content-between align-items-center">
-                      <!-- Comments -->
-                      <div class="col text-muted">
-                        <i class="bi-chat-left-text me-1"></i>
-                        <span
-                          class="fs-5"
-                          data-bs-toggle="tooltip"
-                          data-bs-original-title="11 comments"
-                          >11</span
-                        >
-                      </div>
-                      <!-- Avatar -->
-                      <div class="col-auto d-flex">
-                        <div
-                          class="avatar avatar-circle avatar-xs"
-                          data-bs-toggle="tooltip"
-                          aria-label="Assignee: Jimmy Riley"
-                          data-bs-original-title="Assignee: Jimmy Riley"
-                        >
-                          <img
-                            src="https://d33wubrfki0l68.cloudfront.net/4b8c918c73e2c72876e4bd4ba8c89401bae69d14/5923c/assets/images/profiles/profile-03.jpeg"
-                            alt="..."
-                            class="avatar-img"
-                            width="30"
-                            height="30"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h2 class="h4 text-uppercase p-3 px-4 mb-1">To do (3)</h2>
+              <div id="list-1"></div>
             </div>
           </div>
+                
           <!-- In progress -->
           <div class="tasks">
             <div class="bg-gray-300 px-1 py-2 rounded">
               <h2 class="h4 text-uppercase p-3 px-4 mb-1">In progress (5)</h2>
-              <div id="list-2">
-                <div class="card border-0 mb-2 cursor-move">
-                  <!-- Card body -->
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <h5
-                        class="text-uppercase text-muted fw-semibold mb-0"
-                        data-bs-toggle="tooltip"
-                        data-bs-original-title="DL-40"
-                      >
-                        DL-40
-                      </h5>
-                      <!-- Dropdown -->
-                      <div
-                        class="dropdown"
-                        data-bs-toggle="tooltip"
-                        data-bs-original-title="Actions"
-                      >
-                        <a
-                          href="javascript: void(0);"
-                          class="dropdown-toggle no-arrow text-muted"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <i class="bi-three-dots"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="./task-details.html"
-                              >Edit</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="javascript: void(0);"
-                              >Delete</a
-                            >
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider" />
-                          </li>
-                          <li>
-                            <span class="dropdown-header">OTHER ACTIONS</span>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="javascript: void(0);"
-                              >Add flag</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- Card title -->
-                    <a
-                      href="#"
-                      class="h4 text-body card-title d-inline-block"
-                      data-bs-toggle="tooltip"
-                      data-bs-original-title="Alternative reCaptcha solution"
-                      >Alternative reCaptcha solution</a
-                    >
-                  </div>
-                  <!-- Card header -->
-                  <div class="card-footer border-0">
-                    <div class="row justify-content-between align-items-center">
-                      <!-- Comments -->
-                      <div class="col text-muted">
-                        <i class="bi-chat-left-text me-1"></i>
-                        <span
-                          class="fs-5"
-                          data-bs-toggle="tooltip"
-                          data-bs-original-title="11 comments"
-                          >11</span
-                        >
-                      </div>
-                      <!-- Avatar -->
-                      <div class="col-auto d-flex">
-                        <div
-                          class="avatar avatar-circle avatar-xs"
-                          data-bs-toggle="tooltip"
-                          aria-label="Assignee: Jimmy Riley"
-                          data-bs-original-title="Assignee: Jimmy Riley"
-                        >
-                          <img
-                            src="https://d33wubrfki0l68.cloudfront.net/4b8c918c73e2c72876e4bd4ba8c89401bae69d14/5923c/assets/images/profiles/profile-03.jpeg"
-                            alt="..."
-                            class="avatar-img"
-                            width="30"
-                            height="30"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div id="list-2"></div>
             </div>
           </div>
+
           <!-- Completed -->
           <div class="tasks">
             <div class="bg-gray-300 px-1 py-2 rounded">
-              <h2 class="h4 text-uppercase p-3 px-4 mb-1">Completed (2)</h2>
-              <div id="list-3">
-                <div class="card border-0 mb-2 cursor-move">
-                  <!-- Card body -->
-                  <div class="card-body">
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <h5
-                        class="text-uppercase text-muted fw-semibold mb-0"
-                        data-bs-toggle="tooltip"
-                        data-bs-original-title="DL-40"
-                      >
-                        DL-40
-                      </h5>
-                      <!-- Dropdown -->
-                      <div
-                        class="dropdown"
-                        data-bs-toggle="tooltip"
-                        data-bs-original-title="Actions"
-                      >
-                        <a
-                          href="javascript: void(0);"
-                          class="dropdown-toggle no-arrow text-muted"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <i class="bi-three-dots"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="./task-details.html"
-                              >Edit</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="javascript: void(0);"
-                              >Delete</a
-                            >
-                          </li>
-                          <li>
-                            <hr class="dropdown-divider" />
-                          </li>
-                          <li>
-                            <span class="dropdown-header">OTHER ACTIONS</span>
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="javascript: void(0);"
-                              >Add flag</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- Card title -->
-                    <a
-                      href="#"
-                      class="h4 text-body card-title d-inline-block"
-                      data-bs-toggle="tooltip"
-                      data-bs-original-title="Alternative reCaptcha solution"
-                      >Alternative reCaptcha solution</a
-                    >
-                  </div>
-                  <!-- Card header -->
-                  <div class="card-footer border-0">
-                    <div class="row justify-content-between align-items-center">
-                      <!-- Comments -->
-                      <div class="col text-muted">
-                        <i class="bi-chat-left-text me-1"></i>
-                        <span
-                          class="fs-5"
-                          data-bs-toggle="tooltip"
-                          data-bs-original-title="11 comments"
-                          >11</span
-                        >
-                      </div>
-                      <!-- Avatar -->
-                      <div class="col-auto d-flex">
-                        <div
-                          class="avatar avatar-circle avatar-xs"
-                          data-bs-toggle="tooltip"
-                          aria-label="Assignee: Jimmy Riley"
-                          data-bs-original-title="Assignee: Jimmy Riley"
-                        >
-                          <img
-                            src="https://d33wubrfki0l68.cloudfront.net/4b8c918c73e2c72876e4bd4ba8c89401bae69d14/5923c/assets/images/profiles/profile-03.jpeg"
-                            alt="..."
-                            class="avatar-img"
-                            width="30"
-                            height="30"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h2 class="h4 text-uppercase p-3 px-4 mb-1">Completed (1)</h2>
+              <div id="list-3"></div>
             </div>
           </div>
         </div>
@@ -671,6 +381,6 @@
     </main>
     <!-- End of body -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/theme.bundle.js"></script>
+    <script src="https://dashly-theme.com/assets/js/theme.bundle.js"></script>
   </body>
 </html>
