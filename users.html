@@ -51,7 +51,7 @@
           <!-- Sidebar menu -->
           <ul class="navbar-nav mb-lg-7">
             <li class="nav-item">
-              <a class="nav-link active" href="./index.html">
+              <a class="nav-link" href="./index.html">
                 <i class="bi-house-door me-3"></i>
                 <span>Dashboard</span>
               </a>
@@ -87,7 +87,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link active" href="./users.html">
                 <i class="bi-person me-3"></i>
                 <span>Users</span>
               </a>
@@ -332,11 +332,97 @@
         <div class="d-flex align-items-baseline justify-content-between">
           <!-- Page title -->
           <h1 class="h2">
-            <!-- ADD TITLE HERE -->
+            Users
           </h1>
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addUser">Add user</button>
         </div>
         <div class="row">
-          <!-- ADD MAIN CONTENT -->
+          <div class="col">
+            <div class="card border-0 flex-fill w-100" data-list="{&quot;valueNames&quot;: [&quot;name&quot;, &quot;email&quot;, &quot;type&quot;, &quot;status&quot;], &quot;page&quot;: 3}" id="users">
+              <!-- User table -->
+              <div class="table-responsive">
+                <table class="table align-middle table-edge table-hover table-nowrap mb-0">
+                  <!-- Table header -->
+                  <thead class="thead-light">
+                    <tr>
+                      <th>
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="name">Full name</a>
+                      </th>
+                      <th>
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="email">Email address</a>
+                      </th>
+                      <th>
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="type">User type</a>
+                      </th>
+                      <th>
+                        <a href="javascript: void(0);" class="text-muted list-sort" data-sort="status">Status</a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <!-- Table data -->
+                  <tbody class="list">
+                    <tr>
+                      <td>
+                        <div class="avatar avatar-circle avatar-xs me-2">
+                          <span class="avatar-title text-bg-danger-soft">IN</span>
+                        </div>
+                        <span class="name fw-bold">Isaac Nicol</span>
+                      </td>
+                      <td class="email">isaac.nicol@epicassist.org</td>
+                      <td class="type">Admin</td>
+                      <td class="status"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="avatar avatar-circle avatar-xs me-2">
+                          <span class="avatar-title text-bg-info-soft">MB</span>
+                        </div>
+                        <span class="name fw-bold">Marcus Bancroft</span>
+                      </td>
+                      <td class="email">marcus.bancroft@epicassist.org</td>
+                      <td class="type">Admin</td>
+                      <td class="status"></td>
+                    </tr>                    
+                    <tr>
+                      <td>
+                        <div class="avatar avatar-circle avatar-xs me-2">
+                          <span class="avatar-title text-bg-success-soft">MN</span>
+                        </div>
+                        <span class="name fw-bold">Mitchell Nugent</span>
+                      </td>
+                      <td class="email">mitchell.nugent@epicassist.org</td>
+                      <td class="type">Admin</td>
+                      <td class="status"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->    
+      <div class="modal fade" id="addUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Modal title -->
+              <h3 class="modal-title" id="staticBackdropLabel">Add user</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3"><label class="form-label">Full name</label><input type="text" class="form-control"></div>
+              <div class="mb-3"><label class="form-label">Email address</label><input type="text" class="form-control"></div>
+              <div class="mb-3"><label class="form-label">User type</label><select class="form-control">
+                <option>Admin</option>
+                <option>User</option>
+                </select></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
