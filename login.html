@@ -42,7 +42,8 @@
           <h1 class="mb-2 text-center">Sign In</h1>
           <!-- Subtitle -->
           <p class="text-secondary text-center">
-            Enter your email address and password to access admin panel
+            Enter your email address & password to access the portal, or sign in
+            via your Microsoft 365 account.
           </p>
           <!-- Form -->
           <form>
@@ -50,7 +51,7 @@
               <div class="col-12">
                 <div class="mb-4">
                   <!-- Label -->
-                  <label class="form-label"> Email Address </label>
+                  <label class="form-label"> Email address </label>
                   <!-- Input -->
                   <input
                     type="email"
@@ -71,7 +72,7 @@
                     <div class="col-auto">
                       <!-- Help text -->
                       <a
-                        href="./reset-password-illustration.html"
+                        href="#"
                         class="form-text small text-muted link-primary"
                         >Forgot password</a
                       >
@@ -98,33 +99,25 @@
               </div>
             </div>
             <!-- / .row -->
-
-            <div class="form-check">
-              <!-- Input -->
-              <input type="checkbox" class="form-check-input" id="remember" />
-
-              <!-- Label -->
-              <label class="form-check-label" for="remember">
-                Remember me
-              </label>
-            </div>
-
             <div class="row align-items-center text-center">
               <div class="col-12">
-                <!-- Button -->
-                <button type="button" class="btn w-100 btn-primary mt-6 mb-2">
-                  Sign in
-                </button>
+                <!-- Local sign in -->
+                <a href="./index.html">
+                  <button type="button" class="btn w-100 btn-dark mt-6 mb-2">
+                    Sign in
+                  </button>
+                </a>
               </div>
-
               <div class="col-12">
-                <!-- Link -->
-                <small class="mb-0 text-muted"
-                  >Don't have an account yet?
-                  <a href="./sign-up-basic.html" class="fw-semibold"
-                    >Sign up</a
-                  ></small
-                >
+                <!-- Single sign-on -->
+                <a href=./index.html>
+                  <button
+                    type="button"
+                    class="btn w-100 btn-info mb-2"
+                  >
+                    Sign in via Microsoft 365 <i class="ms-2 bi-windows"></i>
+                  </button>
+                </a>
               </div>
             </div>
             <!-- / .row -->
