@@ -486,15 +486,23 @@
                     </div>
                     <div class="col-lg">
                       <div class="input-group input-group-merge">
-                        <input type="password" class="form-control" autocomplete="off" data-toggle-password-input placeholder="Your new password">
-                        <button type="button" class="input-group-text px-4 text-secondary link-primary" data-toggle-password></button>
+                        <input type="password" class="form-control" id="newPassword" autocomplete="off" data-toggle-password-input="" placeholder="Your new password" data-keeper-lock-id="k-gyctgila3i9">
+                        <button type="button" class="input-group-text px-4 text-secondary link-primary" data-toggle-password=""></button>
+                      </div>
+                      <div class="invalid-feedback">Please add a new password</div>
+                      <div class="d-flex justify-content-between align-items-center mt-3 h-15px">
+                        <div class="progress d-flex flex-grow-1 h-7px">
+                          <div data-zxcvbn="{&quot;input&quot;: &quot;#newPassword&quot;, &quot;text&quot;: &quot;#progressText&quot;}" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                        </div>
+                        <span class="text-muted fs-6" id="progressText" style="margin-left: 0px;"></span>
                       </div>
                     </div>
                     <div class="col-lg">
                       <div class="input-group input-group-merge">
-                        <input type="password" class="form-control" autocomplete="off" data-toggle-password-input placeholder="Confirm your new password">
-                        <button type="button" class="input-group-text px-4 text-secondary link-primary" data-toggle-password></button>
-                      </div>                      
+                        <input type="password" class="form-control" id="newPasswordAgain" autocomplete="off" data-toggle-password-input="" placeholder="Confirm your new password" data-keeper-lock-id="k-8gcy1a6myjt">
+                        <button type="button" class="input-group-text px-4 text-secondary link-primary" data-toggle-password=""></button>
+                      </div>
+                      <div class="invalid-feedback">Please confirm your new password again</div>
                     </div>
                   </div>
                 </div>
