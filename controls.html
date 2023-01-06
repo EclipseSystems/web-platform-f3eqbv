@@ -351,7 +351,14 @@
         <div class="d-flex align-items-baseline justify-content-between">
           <!-- Page title -->
           <h1 class="h2">Controls</h1>
-          <button type="button" class="btn btn-info">Add new section</button>
+          <button
+            type="button"
+            class="btn btn-info"
+            data-bs-toggle="modal"
+            data-bs-target="#controlModal"
+          >
+            Add new section
+          </button>
         </div>
         <div class="row">
           <div class="accordion accordion-flush" id="controls">
@@ -430,6 +437,20 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="controlModal"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="controlModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content"></div>
           </div>
         </div>
       </div>
