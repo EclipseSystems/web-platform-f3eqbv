@@ -93,7 +93,14 @@
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#dashboardCollapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="dashboardCollapse">
+              <a
+                class="nav-link"
+                href="#dashboardCollapse"
+                data-bs-toggle="collapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="dashboardCollapse"
+              >
                 <i class="bi-gear me-3"></i>
                 <span>Settings</span>
               </a>
@@ -103,7 +110,9 @@
                     <a href="./admin.html" class="nav-link">Admin</a>
                   </li>
                   <li class="nav-item">
-                    <a href="./permissions.html"  class="nav-link">Permissions</a>
+                    <a href="./permissions.html" class="nav-link"
+                      >Permissions</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -342,7 +351,14 @@
         <div class="d-flex align-items-baseline justify-content-between">
           <!-- Page title -->
           <h1 class="h2">Tasks</h1>
-          <button type="button" class="btn btn-info">Add new task</button>
+          <button
+            type="button"
+            class="btn btn-info"
+            data-bs-toggle="modal"
+            data-bs-target="#addTask"
+          >
+            Add new task
+          </button>
         </div>
         <!-- Kanban board -->
         <div class="board" data-sortable='["list-1", "list-2", "list-3"]'>
@@ -476,6 +492,88 @@
             <div class="bg-gray-300 px-1 py-2 rounded">
               <h2 class="h4 text-uppercase p-3 px-4 mb-1">Completed (1)</h2>
               <div id="list-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="addTask"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Modal title -->
+              <h3 class="modal-title" id="staticBackdropLabel">Add new task</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 needs-validation" novalidate>
+                <!-- Name -->
+                <div class="mb-3">
+                  <label for="validationName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="validationName" required/>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <!-- Multiple select -->
+                <div class="mb-3">
+                  <label for="validationSelect" class="form-label">Assign to:</label>
+                  <select
+                    class="form-select"
+                    id="validationSelect" 
+                    multiple
+                    data-select='{
+                      "placeholder": "Choose members..."
+                    }'
+                    data-option-template='<span class="d-flex align-items-center py-2"><span class="avatar avatar-circle avatar-xxs"><span class="avatar-title text-bg-success-soft">[[value]]</span></span><span class="text-truncate ms-2">[[text]]</span><span class="ms-2"></span></span>'
+                    data-item-template='<span class="d-flex align-items-center"><span class="avatar avatar-circle avatar-xxs"><span class="avatar-title text-bg-success-soft">[[value]]</span></span><span class="text-truncate ms-2">[[text]]</span><span class="ms-2"></span></span>'
+                    required
+                  >
+                    >
+                    <option value="IN">Isaac Nicol</option>
+                    <option value="JM">Jess Marallag</option>
+                    <option value="MR">Mahesh Rathnayake</option>
+                    <option value="MB">Marcus Bancroft</option>
+                    <option value="MN">Mitchell Nugent</option>
+                  </select>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <!-- Due date-->
+                <div class="mb-3">
+                  <label for="validationDate" class="form-label">
+                    Due date</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationDate"
+                    placeholder="Select date.." 
+                    data-flatpickr
+                  />
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <!-- Description -->
+                <div class="mb-3">
+                  <label for="validationDesc" class="form-label">Description</label>
+                  <textarea class="form-control" rows="4" id="validationDesc" required></textarea>
+                </div>
+                </button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
             </div>
           </div>
         </div>
