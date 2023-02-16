@@ -524,8 +524,9 @@
                 <div class="mb-3">
                   <label for="validationName" class="form-label">Name</label>
                   <input type="text" class="form-control" id="validationName" required/>
-                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please add a name.</div>
                 </div>
+
                 <!-- Multiple select -->
                 <div class="mb-3">
                   <label for="validationSelect" class="form-label">Assign to:</label>
@@ -547,29 +548,25 @@
                     <option value="MB">Marcus Bancroft</option>
                     <option value="MN">Mitchell Nugent</option>
                   </select>
-                  <div class="valid-feedback">
-                    Looks good!
+                  <div class="invalid-feedback">
+                    Please assign a user.
                   </div>
                 </div>
+
                 <!-- Due date-->
                 <div class="mb-3">
-                  <label for="validationDate" class="form-label">
-                    Due date</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="validationDate"
-                    placeholder="Select date.." 
-                    data-flatpickr
-                  />
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
+                  <label for="validationDue" class="form-label">Due date</label>
+                  <input type="text" class="form-control" id="validationDue" placeholder="Select date.." required>
+                  <div class="invalid-feedback">Please add a due date.</div>
                 </div>
+
                 <!-- Description -->
                 <div class="mb-3">
                   <label for="validationDesc" class="form-label">Description</label>
                   <textarea class="form-control" rows="4" id="validationDesc" required></textarea>
+                  <div class="invalid-feedback">
+                    Please add a description.
+                  </div>
                 </div>
                 </button>
                 <button type="submit" class="btn btn-primary">Submit</button>
