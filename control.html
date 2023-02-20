@@ -401,6 +401,15 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="mb-5 mt-5">
+                    <div class="form check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="RFFR_core">
+                      <label class="form-check-label" for="RFFR_core"><span class="ms-1"></span>Supports RFFR core expectations?</label>
+                    </div>
+                  </div>
+
+                  <!-- Control implementation -->
                   <div class="mb-3">
                     <label class="form-label"
                       >Current implementation status</label
@@ -412,10 +421,20 @@
                       <option>Not applicable</option>
                     </select>
                   </div>
+
+                  <h2 class="card-header-title h4 text-uppercase mt-6 mb-4">Implementation</h2>
+
                   <div class="mb-3">
                     <label class="form-label">Implementation details</label>
-                    <textarea class="form-control"></textarea>
+                    <div class="h-200px" data-quill></div>
                   </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Implementation date</label>
+                    <input type="text" class="form-control" data-flatpickr>
+                  </div>
+
+                  <!-- Person/s responsible -->
                   <div class="mb-3">
                     <label class="form-label">Person/s responsible</label>
                     <select
@@ -436,18 +455,22 @@
                       <option value="MN">Mitchell Nugent</option>
                     </select>
                   </div>
+
                   <!-- <div class="mb-3"></div>
                   <div class="mb-3"></div>
-                  <div class="mb-3"></div>
                   <div class="mb-3"></div> -->
+
+                  <!-- Attachments -->
                   <div class="dropzone text-center px-4 py-6" data-dropzone>
                     <div class="dz-message">
-                      <img class="avatar avatar-xxl mb-3" src="../assets/images/illustrations/upload-illustration.svg" alt="...">
+                      <img class="avatar avatar-xxl mb-3" src="./assets/img/upload-illustration.svg" alt="...">
                       <h5 class="mb-4">Drag and drop your file here</h5>
                       <p class="mb-4">or</p>
-                      <span class="btn btn-sm btn-gray-300">Browser files</span>
+                      <span class="btn btn-sm btn-gray-300">Browse files</span>
                     </div>
                   </div>
+
+                  <!-- Buttons -->
                   <div class="col-12 mt-5">
                     <button class="btn btn-primary">Save</button>
                     <button class="btn btn-secondary">
